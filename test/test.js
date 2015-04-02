@@ -63,6 +63,16 @@ suite("VFS Tests", function(){
   });
 
   test("File listing should work", function(){
+    var vfs = new VirtualFs();
+     vfs.setRoot("/");
+     var addedFile = vfs.addFile('var', vfs.getRoot());
+     vfs.addFile("tmp",addedFile);
+     vfs.addFile("home", vfs.getRoot());
+     resultArr = vfs.getAllFilesIn('/');
+     expect(resultArr.length).to.equal(3);
+     expect(resultArr[0]).to.equal('/home');
+     expect(resultArr[1]).to.equal('/tmp');
+     expect(resultArr[1]).to.equal('/tmp/var');
   });
 
 
