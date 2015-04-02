@@ -1,0 +1,19 @@
+{
+  "name": "VirtualFs",
+  "version": "0.0.0",
+  "description": "Test runner",
+  "main": "runner.js",
+  "scripts": {
+    "test": "mocha --ui tdd test"
+  },
+ 
+  "author": "",
+  "license": "BSD",
+   "dependencies": {
+	"vow":""   
+  },
+ "devDependencies": {
+  "chai": "*",
+  "mocha": "*"
+ }
+}
